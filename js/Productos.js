@@ -117,19 +117,27 @@
                 document.body.style.overflow = '';
             }
 
-            // Función para compartir por WhatsApp
-            function shareOnWhatsApp(productName, imageUrl, productPrice) {
-             let message = `Hola, estoy interesado en el producto: ${productName}`;
+function shareOnWhatsApp(productName, productPrice) {
+    const whatsappNumber = '3008650664';
 
-                if (productPrice) {
-                  message += `\nPrecio: $${productPrice}`;
-                }
-                if (imageUrl) {
-                  message += `\nImagen: ${imageUrl}`;
-               }
-                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-                window.open(whatsappUrl, '_blank');
-            }
+    // Construcción del mensaje con formato WhatsApp y emojis
+    let message = 
+`¡Hola! 👋
+
+Estoy *muy interesado* en el producto: *${productName}* ✨
+
+¡Me encantaría saber más! 💥
+
+Precio: *$${productPrice}* 💰
+
+¿Me puedes ayudar con más detalles? 😊`;
+
+    // Construye la URL para abrir WhatsApp con el mensaje codificado
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    // Abre una nueva ventana/pestaña con WhatsApp Web para enviar el mensaje
+    window.open(whatsappUrl, '_blank');
+}
 
             // Función para descargar la tarjeta de producto como imagen
             async function downloadProductCard() {
