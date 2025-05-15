@@ -1,4 +1,4 @@
-    document.addEventListener('DOMContentLoaded', function() {
+ document.addEventListener('DOMContentLoaded', function() {
             // Elementos DOM
             const filterButtons = document.querySelectorAll('.filter-btn');
             const productItems = document.querySelectorAll('.product-item');
@@ -223,9 +223,9 @@
             function updateFullscreenButton() {
                 if (document.fullscreenElement || document.webkitFullscreenElement || 
                     document.mozFullScreenElement || document.msFullscreenElement) {
-                    fullscreenBtn.innerHTML = '<i class="fas fa-compress"></i> Salir de pantalla completa';
+                    fullscreenBtn.innerHTML = '<i class="fas fa-compress"></i> Salir';
                 } else {
-                    fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i> Pantalla completa';
+                    fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
                 }
             }
 

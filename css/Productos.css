@@ -267,13 +267,12 @@
         padding: 12px 15px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: end;
     }
 
     .product-title {
         font-size: 14px;
         font-weight: 500;
-        margin: 0;
     }
 
     .product-link {
@@ -667,5 +666,9 @@
         .share-buttons {
             flex-direction: column;
             gap: 10px;
+        }
+        .product-card{
+            border: 1px solid rgb(0, 255, 102);
+            min-height: 40vh;
         }
     }
