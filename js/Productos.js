@@ -121,7 +121,8 @@ function shareOnWhatsApp(productName, productPrice) {
   
 
     // Construcción del mensaje con formato WhatsApp y emojis
-    let message = `¡Hola! 👋🏽
+    let message = `
+    ¡Hola, Brilitos De Luna! 👋🏽
 
     Estoy *muy interesado* en el producto: *${productName}* ✨
 
