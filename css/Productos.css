@@ -1,4 +1,4 @@
-  :root {
+:root {
             --primary-color: #8a2be2; /* Color lila principal */
             --secondary-color: #9370db; /* Color lila secundario */
             --text-color: #333;
@@ -38,6 +38,28 @@
             text-decoration: none;
             margin-left: 20px;
             font-size: 14px;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .header-right a:hover {
+            color: var(--primary-color);
+        }
+
+        .header-right a i {
+            margin-right: 5px;
+        }
+
+        .fullscreen-btn {
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .fullscreen-btn:hover {
+            background-color: rgba(138, 43, 226, 0.1);
         }
 
         .filter-container {
@@ -69,6 +91,7 @@
             font-size: 14px;
             transition: all 0.3s;
         }
+
         .filter-btn.active, .filter-btn:hover {
             background-color: var(--primary-color);
             color: white;
@@ -125,6 +148,8 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
+            position: relative;
+            overflow: hidden;
         }
 
         .product-img img {
@@ -132,6 +157,63 @@
             max-height: 100%;
             object-fit: contain;
             cursor: pointer; /* Añadido para indicar que es clickeable */
+            transition: transform 0.3s ease;
+        }
+
+        .product-img img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Botón de expandir imagen */
+        .expand-btn {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: var(--primary-color);
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s, transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .product-img:hover .expand-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .expand-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Indicador de zoom */
+        .zoom-indicator {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .product-img:hover .zoom-indicator {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .product-footer {
@@ -167,7 +249,12 @@
             color: var(--text-color);
         }
 
-        /* Estilos para el modal de imagen */
+        /* Estilos mejorados para el modal de imagen */
+        .modal-backdrop {
+            opacity: 0.85 !important; /* Fondo más oscuro para enfocar la imagen */
+            backdrop-filter: blur(5px); /* Efecto de desenfoque en el fondo */
+        }
+
         .fullscreen-modal .modal-dialog {
             max-width: 100%;
             margin: 0;
@@ -178,13 +265,14 @@
         }
 
         .fullscreen-modal .modal-content {
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: transparent;
             border: none;
             border-radius: 0;
             height: auto;
             width: auto;
-            max-width: 100%;
-            max-height: 100vh;
+            max-width: 90%;
+            max-height: 90vh;
+            box-shadow: none;
         }
 
         .fullscreen-modal .modal-body {
@@ -192,28 +280,67 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
 
         .fullscreen-modal img {
             max-width: 100%;
             max-height: 90vh;
             object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeInScale 0.4s ease-out;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         .fullscreen-modal .btn-close {
             position: absolute;
-            top: 15px;
-            right: 15px;
+            top: -40px;
+            right: -40px;
             color: white;
-            font-size: 30px;
-            opacity: 0.8;
+            font-size: 24px;
+            opacity: 0.9;
             z-index: 1050;
-            background: transparent;
+            background: rgba(0, 0, 0, 0.3);
             border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
 
         .fullscreen-modal .btn-close:hover {
             opacity: 1;
+            background: var(--primary-color);
+            transform: rotate(90deg);
+        }
+
+        .image-info {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            font-weight: 300;
+            opacity: 0.9;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
         }
 
         @media (max-width: 768px) {
@@ -229,5 +356,12 @@
             }
             .filtro{
                 margin-top: 20px;
+            }
+            
+            .fullscreen-modal .btn-close {
+                top: -30px;
+                right: 10px;
+                width: 35px;
+                height: 35px;
             }
         }

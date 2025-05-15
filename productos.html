@@ -14,10 +14,6 @@
     <link rel="stylesheet" href="./css/Productos.css">
     <link rel="icon" type="image/x-icon" href="./assets/Logo-removebg-preview (1).png">
 
-<style>
-    
-</style>
-
 </head>
 <body>
     <!-- Header -->
@@ -27,7 +23,7 @@
         </div>
         <div class="header-right">
             <a href="#"><i class="fas fa-list"></i> Productos</a>
-            <!-- <a href="#"><i class="fas fa-sign-in-alt"></i> Iniciar sesión</a> -->
+            <a href="#" class="fullscreen-btn" id="fullscreenBtn"><i class="fas fa-expand"></i> Pantalla completa</a>
         </div>
     </div>
 
@@ -63,6 +59,10 @@
                 <div class="product-card">
                     <div class="product-img">
                         <img src="./assets/Gancho-rojo.jpeg" alt="Gancho Decorativo" class="product-image">
+                        <div class="zoom-indicator"><i class="fas fa-search-plus"></i> Ampliar</div>
+                        <button class="expand-btn" title="Ver en pantalla completa">
+                            <i class="fas fa-expand-alt"></i>
+                        </button>
                     </div>
                     <div class="product-footer">
                         <div class="product-title">Ganchos</div>
@@ -76,6 +76,10 @@
                 <div class="product-card">
                     <div class="product-img">
                         <img src="./assets/espejos.jpeg" alt="Espejo Vintage" class="product-image">
+                        <div class="zoom-indicator"><i class="fas fa-search-plus"></i> Ampliar</div>
+                        <button class="expand-btn" title="Ver en pantalla completa">
+                            <i class="fas fa-expand-alt"></i>
+                        </button>
                     </div>
                     <div class="product-footer">
                         <div class="product-title">Espejos</div>
@@ -89,6 +93,10 @@
                 <div class="product-card">
                     <div class="product-img">
                         <img src="./assets/Pulseras.jpeg" alt="Pulsera Artesanal" class="product-image">
+                        <div class="zoom-indicator"><i class="fas fa-search-plus"></i> Ampliar</div>
+                        <button class="expand-btn" title="Ver en pantalla completa">
+                            <i class="fas fa-expand-alt"></i>
+                        </button>
                     </div>
                     <div class="product-footer">
                         <div class="product-title">Pulseras</div>
@@ -104,6 +112,10 @@
                 <div class="product-card">
                     <div class="product-img">
                         <img src="./assets/Ganchos-estrellas.jpeg" alt="Gancho Minimalista" class="product-image">
+                        <div class="zoom-indicator"><i class="fas fa-search-plus"></i> Ampliar</div>
+                        <button class="expand-btn" title="Ver en pantalla completa">
+                            <i class="fas fa-expand-alt"></i>
+                        </button>
                     </div>
                     <div class="product-footer">
                         <div class="product-title">Ganchos Premium</div>
@@ -117,6 +129,10 @@
                 <div class="product-card">
                     <div class="product-img">
                         <img src="./assets/Pulseras (2).jpeg" alt="Pulsera Elegante" class="product-image">
+                        <div class="zoom-indicator"><i class="fas fa-search-plus"></i> Ampliar</div>
+                        <button class="expand-btn" title="Ver en pantalla completa">
+                            <i class="fas fa-expand-alt"></i>
+                        </button>
                     </div>
                     <div class="product-footer">
                         <div class="product-title">Pulseras Elegantes</div>
@@ -130,6 +146,10 @@
                 <div class="product-card">
                     <div class="product-img">
                         <img src="./assets/gancho mariposa.jpeg" alt="Espejo Redondo" class="product-image">
+                        <div class="zoom-indicator"><i class="fas fa-search-plus"></i> Ampliar</div>
+                        <button class="expand-btn" title="Ver en pantalla completa">
+                            <i class="fas fa-expand-alt"></i>
+                        </button>
                     </div>
                     <div class="product-footer">
                         <div class="product-title">Gancho mariposa</div>
@@ -143,6 +163,10 @@
                 <div class="product-card">
                     <div class="product-img">
                         <img src="./assets/Gancho-redondo.jpeg" alt="Gancho Vintage" class="product-image">
+                        <div class="zoom-indicator"><i class="fas fa-search-plus"></i> Ampliar</div>
+                        <button class="expand-btn" title="Ver en pantalla completa">
+                            <i class="fas fa-expand-alt"></i>
+                        </button>
                     </div>
                     <div class="product-footer">
                         <div class="product-title">Ganchos Vintage</div>
@@ -155,7 +179,7 @@
         </div>
     </div>
 
-    <!-- Modal para imagen en pantalla completa -->
+    <!-- Modal para imagen en pantalla completa (mejorado) -->
     <div class="modal fade fullscreen-modal" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -164,6 +188,7 @@
                 </button>
                 <div class="modal-body">
                     <img src="/placeholder.svg" id="fullScreenImage" alt="Imagen en pantalla completa">
+                    <div class="image-info" id="imageInfo"></div>
                 </div>
             </div>
         </div>
