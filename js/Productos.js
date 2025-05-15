@@ -118,14 +118,15 @@
             }
 
             // Función para compartir por WhatsApp
-            function shareOnWhatsApp(productName) {
+            function shareOnWhatsApp(productName , imgElement, productPrice) {
                 // Crear el mensaje para WhatsApp
                 const message = `Hola, estoy interesado en el producto: ${productName}`;
+                const message_2 = `Precio: ${productPrice}`;
+                const message_1 = `Imagen: ${imgElement}`;
+
                 
-                // Crear la URL para abrir WhatsApp
-                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message, message_1, message_2)}`;
                 
-                // Abrir WhatsApp en una nueva ventana
                 window.open(whatsappUrl, '_blank');
             }
 
