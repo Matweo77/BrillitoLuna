@@ -121,17 +121,13 @@ function shareOnWhatsApp(productName, productPrice) {
   
 
     // Construcción del mensaje con formato WhatsApp y emojis
-    let message = 
-`¡Hola! 👋🏽
+    let message = `¡Hola! 👋🏽
 
-Estoy *muy interesado* en el producto: *${productName}* ✨
+    Estoy *muy interesado* en el producto: *${productName}* ✨
 
-¡Me encantaría saber más! 💥 
+    ¡Me encantaría saber más! 💥 
 
-Precio: *$${productPrice}* 🫰💸
-
-
-¿Me puedes ayudar con más detalles? ☺`;
+    ¿Me puedes ayudar con más detalles? ☺`;
 
     // Construye la URL para abrir WhatsApp con el mensaje codificado
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -139,6 +135,9 @@ Precio: *$${productPrice}* 🫰💸
     // Abre una nueva ventana/pestaña con WhatsApp Web para enviar el mensaje
     window.open(whatsappUrl, '_blank');
 }
+
+
+
 
             // Función para descargar la tarjeta de producto como imagen
             async function downloadProductCard() {
