@@ -627,7 +627,7 @@
         }
 
         .product-img {
-            height: 150px;
+            height: 29vh;
         }
         
         .filter-title {
@@ -666,5 +666,8 @@
         .share-buttons {
             flex-direction: column;
             gap: 10px;
+        }
+          .product-card{
+            height: 35vh !important;
         }
     }
