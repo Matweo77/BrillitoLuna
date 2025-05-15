@@ -125,6 +125,8 @@ function shareOnWhatsApp(productName, productPrice) {
 
     Estoy *muy interesado* en el producto: *${productName}* ✨
 
+    Precio : ${productPrice} 
+
     ¡Me encantaría saber más! 💥 
 
     ¿Me puedes ayudar con más detalles? ☺`;
