@@ -9,17 +9,18 @@
     <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Font Awesome para fuente -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
-    <!-- Font Awesome para estilos -->
-    <link rel="stylesheet" href="./css/Productos.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
+    <!-- html2canvas para captura de pantalla -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <link rel="icon" type="image/x-icon" href="./assets/Logo-removebg-preview (1).png">
+    <link rel="stylesheet" href="./css/Productos.css">
 
 </head>
 <body>
     <!-- Header -->
     <div class="header">
         <div>
-            <img src="./assets/Logo-removebg-preview (1).png" alt="Edit Icon" style="width: 50px; height: 40px;">
+            <img src="./assets/Logo-removebg-preview (1).png" alt="Logo" style="width: 50px; height: 40px;">
         </div>
         <div class="header-right">
             <a href="#"><i class="fas fa-list"></i> Productos</a>
@@ -43,8 +44,8 @@
                 <div class="col-md-8 filtro">
                     <div class="filter-title">Buscar productos</div>
                     <div class="search-container">
-                        <input type="text" placeholder="Buscar...">
                         <button class="btn"><i class="fas fa-search"></i></button>
+                        <input type="text" placeholder="Buscar productos...">
                     </div>
                 </div>
             </div>
@@ -60,8 +61,11 @@
                     <div class="product-img">
                         <img src="./assets/Gancho-rojo.jpeg" alt="Gancho Decorativo" class="product-image">
                         <div class="zoom-indicator"><i class="fas fa-search-plus"></i> Ampliar</div>
-                        <button class="expand-btn" title="Ver en pantalla completa">
+                        <button class="action-btn expand-btn" title="Ver en pantalla completa">
                             <i class="fas fa-expand-alt"></i>
+                        </button>
+                        <button class="action-btn whatsapp-btn" title="Compartir por WhatsApp" data-product-name="Ganchos" data-product-price="12000">
+                            <i class="fab fa-whatsapp"></i>
                         </button>
                     </div>
                     <div class="product-footer">
@@ -77,8 +81,11 @@
                     <div class="product-img">
                         <img src="./assets/espejos.jpeg" alt="Espejo Vintage" class="product-image">
                         <div class="zoom-indicator"><i class="fas fa-search-plus"></i> Ampliar</div>
-                        <button class="expand-btn" title="Ver en pantalla completa">
+                        <button class="action-btn expand-btn" title="Ver en pantalla completa">
                             <i class="fas fa-expand-alt"></i>
+                        </button>
+                        <button class="action-btn whatsapp-btn" title="Compartir por WhatsApp" data-product-name="Espejos" data-product-price="16000">
+                            <i class="fab fa-whatsapp"></i>
                         </button>
                     </div>
                     <div class="product-footer">
@@ -94,8 +101,11 @@
                     <div class="product-img">
                         <img src="./assets/Pulseras.jpeg" alt="Pulsera Artesanal" class="product-image">
                         <div class="zoom-indicator"><i class="fas fa-search-plus"></i> Ampliar</div>
-                        <button class="expand-btn" title="Ver en pantalla completa">
+                        <button class="action-btn expand-btn" title="Ver en pantalla completa">
                             <i class="fas fa-expand-alt"></i>
+                        </button>
+                        <button class="action-btn whatsapp-btn" title="Compartir por WhatsApp" data-product-name="Pulseras" data-product-price="8000">
+                            <i class="fab fa-whatsapp"></i>
                         </button>
                     </div>
                     <div class="product-footer">
@@ -105,16 +115,17 @@
                 </div>
             </div>
 
-            
-
             <!-- Product 4 -->
             <div class="col-md-3 col-sm-6 mb-4 product-item" data-category="ganchos">
                 <div class="product-card">
                     <div class="product-img">
                         <img src="./assets/Ganchos-estrellas.jpeg" alt="Gancho Minimalista" class="product-image">
                         <div class="zoom-indicator"><i class="fas fa-search-plus"></i> Ampliar</div>
-                        <button class="expand-btn" title="Ver en pantalla completa">
+                        <button class="action-btn expand-btn" title="Ver en pantalla completa">
                             <i class="fas fa-expand-alt"></i>
+                        </button>
+                        <button class="action-btn whatsapp-btn" title="Compartir por WhatsApp" data-product-name="Ganchos Premium" data-product-price="15000">
+                            <i class="fab fa-whatsapp"></i>
                         </button>
                     </div>
                     <div class="product-footer">
@@ -130,8 +141,11 @@
                     <div class="product-img">
                         <img src="./assets/Pulseras (2).jpeg" alt="Pulsera Elegante" class="product-image">
                         <div class="zoom-indicator"><i class="fas fa-search-plus"></i> Ampliar</div>
-                        <button class="expand-btn" title="Ver en pantalla completa">
+                        <button class="action-btn expand-btn" title="Ver en pantalla completa">
                             <i class="fas fa-expand-alt"></i>
+                        </button>
+                        <button class="action-btn whatsapp-btn" title="Compartir por WhatsApp" data-product-name="Pulseras Elegantes" data-product-price="10000">
+                            <i class="fab fa-whatsapp"></i>
                         </button>
                     </div>
                     <div class="product-footer">
@@ -147,8 +161,11 @@
                     <div class="product-img">
                         <img src="./assets/gancho mariposa.jpeg" alt="Espejo Redondo" class="product-image">
                         <div class="zoom-indicator"><i class="fas fa-search-plus"></i> Ampliar</div>
-                        <button class="expand-btn" title="Ver en pantalla completa">
+                        <button class="action-btn expand-btn" title="Ver en pantalla completa">
                             <i class="fas fa-expand-alt"></i>
+                        </button>
+                        <button class="action-btn whatsapp-btn" title="Compartir por WhatsApp" data-product-name="Gancho mariposa" data-product-price="14000">
+                            <i class="fab fa-whatsapp"></i>
                         </button>
                     </div>
                     <div class="product-footer">
@@ -164,8 +181,11 @@
                     <div class="product-img">
                         <img src="./assets/Gancho-redondo.jpeg" alt="Gancho Vintage" class="product-image">
                         <div class="zoom-indicator"><i class="fas fa-search-plus"></i> Ampliar</div>
-                        <button class="expand-btn" title="Ver en pantalla completa">
+                        <button class="action-btn expand-btn" title="Ver en pantalla completa">
                             <i class="fas fa-expand-alt"></i>
+                        </button>
+                        <button class="action-btn whatsapp-btn" title="Compartir por WhatsApp" data-product-name="Ganchos Vintage" data-product-price="13000">
+                            <i class="fab fa-whatsapp"></i>
                         </button>
                     </div>
                     <div class="product-footer">
@@ -174,8 +194,6 @@
                     </div>
                 </div>
             </div>
-
-          
         </div>
     </div>
 
@@ -189,15 +207,60 @@
                 <div class="modal-body">
                     <img src="/placeholder.svg" id="fullScreenImage" alt="Imagen en pantalla completa">
                     <div class="image-info" id="imageInfo"></div>
+                    <button class="modal-whatsapp-btn" id="modalWhatsappBtn">
+                        <i class="fab fa-whatsapp"></i> Compartir por WhatsApp
+                    </button>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Página de compartir -->
+    <div class="share-page" id="sharePage">
+        <div class="share-container">
+            <div class="share-header">
+                <h3>Compartir Producto</h3>
+                <button class="share-close" id="shareClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="share-image">
+                <img src="/placeholder.svg" id="shareImage" alt="Imagen del producto">
+                <div class="product-price" id="shareProductPrice"></div>
+            </div>
+            <div class="share-details">
+                <h4 id="shareProductName">Nombre del Producto</h4>
+                <p>¿Te gustaría compartir este producto?</p>
+                <div class="share-buttons">
+                    <button class="share-btn share-whatsapp-btn" id="shareWhatsappBtn">
+                        <i class="fab fa-whatsapp"></i> Compartir por WhatsApp
+                    </button>
+                    <button class="share-btn share-download-btn" id="shareDownloadBtn">
+                        <i class="fas fa-download"></i> Descargar imagen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor oculto para captura de pantalla -->
+    <div id="captureContainer" class="capture-container">
+        <div class="capture-header">
+            <h3>Compartir Producto</h3>
+        </div>
+        <div class="capture-image">
+            <img src="/placeholder.svg" id="captureImage" alt="Imagen del producto">
+            <div class="product-price" id="captureProductPrice"></div>
+        </div>
+        <div class="capture-details">
+            <h4 id="captureProductName">Nombre del Producto</h4>
         </div>
     </div>
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- JavaScript para los filtros -->
-     <script src="./js/Productos.js"></script>
+    <!-- JavaScript optimizado -->
+    <script src="./js/Productos.js"> </script>
 </body>
 </html>
