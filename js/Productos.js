@@ -118,7 +118,6 @@
             }
 
 function shareOnWhatsApp(productName, productPrice) {
-    const whatsappNumber = '3008650664';
 
     // Construcción del mensaje con formato WhatsApp y emojis
     let message = 
