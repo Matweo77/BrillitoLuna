@@ -118,15 +118,16 @@
             }
 
             // Función para compartir por WhatsApp
-            function shareOnWhatsApp(productName , imgElement, productPrice) {
-                // Crear el mensaje para WhatsApp
-                const message = `Hola, estoy interesado en el producto: ${productName}`;
-                const message_2 = `Precio: ${productPrice}`;
-                const message_1 = `Imagen: ${imgElement}`;
+            function shareOnWhatsApp(productName, imageUrl, productPrice) {
+             let message = `Hola, estoy interesado en el producto: ${productName}`;
 
-                
-                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message, message_1, message_2)}`;
-                
+                if (productPrice) {
+                  message += `\nPrecio: $${productPrice}`;
+                }
+                if (imageUrl) {
+                  message += `\nImagen: ${imageUrl}`;
+               }
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
                 window.open(whatsappUrl, '_blank');
             }
 
@@ -294,8 +295,9 @@
 
             // Evento para el botón de WhatsApp en la página de compartir
             shareWhatsappBtn.addEventListener('click', function() {
-                shareOnWhatsApp(currentProduct.name);
+              shareOnWhatsApp(currentProduct.name, currentProduct.imageSrc, currentProduct.price);
             });
+
 
             // Evento para el botón de descarga en la página de compartir
             shareDownloadBtn.addEventListener('click', function() {
