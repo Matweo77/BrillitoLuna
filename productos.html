@@ -11,194 +11,11 @@
     <!-- Font Awesome para fuente -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
     <!-- Font Awesome para estilos -->
-    <link rel="stylesheet" href="/css/productos.css">
+    <link rel="stylesheet" href="./css/productos.css">
     <link rel="icon" type="image/x-icon" href="./assets/Logo-removebg-preview (1).png">
 
 <style>
-     :root {
-            --primary-color: #8a2be2; /* Color lila principal */
-            --secondary-color: #9370db; /* Color lila secundario */
-            --text-color: #333;
-            --light-bg: #f8f9fa;
-        }
-
-        body {
-            background-color: var(--light-bg);
-            font-family: 'Montserrat', 'Josefin Sans', Arial, sans-serif;
-            color: var(--text-color);
-        }
-
-        .header {
-            background-color: white;
-            color: var(--text-color);
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .header-right {
-            display: flex;
-            align-items: center;
-        }
-
-        .header-right a {
-            color: var(--text-color);
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 14px;
-        }
-
-        .filter-container {
-            /* background-color: rgb(255, 255, 255); */
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 30px;
-            /* box-shadow: 0 2px 5px rgba(0,0,0,0.05); */
-        }
-
-        .filter-title {
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .filter-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .filter-btn {
-            background-color: rgb(255, 255, 255);
-            color: var(--text-color);
-            border: 1px solid #eee;
-            padding: 8px 15px;
-            border-radius: 10px;
-            font-size: 14px;
-            transition: all 0.3s;
-        }
-
-        .filter-btn.active, .filter-btn:hover {
-            background-color: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
-        }
-
-        .search-container {
-            position: relative;
-            margin-bottom: 20px;
-        }
-
-        .search-container input {
-            border-radius: 20px;
-            padding: 10px 15px;
-            border: 1px solid #eee;
-            width: 100%;
-        }
-
-        .search-container .btn {
-            position: absolute;
-            right: 10px;
-            top: 8px;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            /* background-color: var(--primary-color); */
-            color: rgb(0, 0, 0);
-            border: none;
-        }
-
-        .product-card {
-            background-color: rgb(255, 255, 255);
-            border-radius: 0;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-            height: 100%;
-            border: 1px solid #eee;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .product-img {
-            height: 200px;
-            background-color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .product-img img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-
-        .product-footer {
-            background-color: #333;
-            color: white;
-            padding: 10px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .product-title {
-            font-size: 14px;
-            font-weight: normal;
-            margin: 0;
-        }
-
-        .product-link {
-            color: #999;
-            font-size: 12px;
-            text-decoration: none;
-        }
-
-        .product-link:hover {
-            color: white;
-            text-decoration: underline;
-        }
-
-        .section-title {
-            font-size: 24px;
-            font-weight: normal;
-            margin-bottom: 30px;
-            color: var(--text-color);
-        }
-
-        @media (max-width: 768px) {
-            .filter-container {
-                padding: 15px;
-            }
-
-            .product-img {
-                height: 150px;
-            }
-            .filter-title {
-             display: none;
-            }
-            .filtro{
-                margin-top: 20px;
-            }
-        }
+    
 </style>
 
 </head>
@@ -245,7 +62,7 @@
             <div class="col-md-3 col-sm-6 mb-4 product-item" data-category="ganchos">
                 <div class="product-card">
                     <div class="product-img">
-                        <img src="./assets/Gancho-rojo.jpeg" alt="Gancho Decorativo">
+                        <img src="./assets/Gancho-rojo.jpeg" alt="Gancho Decorativo" class="product-image">
                     </div>
                     <div class="product-footer">
                         <div class="product-title">Ganchos</div>
@@ -258,7 +75,7 @@
             <div class="col-md-3 col-sm-6 mb-4 product-item" data-category="espejos">
                 <div class="product-card">
                     <div class="product-img">
-                        <img src="./assets/espejos.jpeg" alt="Espejo Vintage">
+                        <img src="./assets/espejos.jpeg" alt="Espejo Vintage" class="product-image">
                     </div>
                     <div class="product-footer">
                         <div class="product-title">Espejos</div>
@@ -271,7 +88,7 @@
             <div class="col-md-3 col-sm-6 mb-4 product-item" data-category="pulseras">
                 <div class="product-card">
                     <div class="product-img">
-                        <img src="./assets/Pulseras.jpeg" alt="Pulsera Artesanal">
+                        <img src="./assets/Pulseras.jpeg" alt="Pulsera Artesanal" class="product-image">
                     </div>
                     <div class="product-footer">
                         <div class="product-title">Pulseras</div>
@@ -286,7 +103,7 @@
             <div class="col-md-3 col-sm-6 mb-4 product-item" data-category="ganchos">
                 <div class="product-card">
                     <div class="product-img">
-                        <img src="./assets/Ganchos-estrellas.jpeg" alt="Gancho Minimalista">
+                        <img src="./assets/Ganchos-estrellas.jpeg" alt="Gancho Minimalista" class="product-image">
                     </div>
                     <div class="product-footer">
                         <div class="product-title">Ganchos Premium</div>
@@ -299,7 +116,7 @@
             <div class="col-md-3 col-sm-6 mb-4 product-item" data-category="pulseras">
                 <div class="product-card">
                     <div class="product-img">
-                        <img src="./assets/Pulseras (2).jpeg" alt="Pulsera Elegante">
+                        <img src="./assets/Pulseras (2).jpeg" alt="Pulsera Elegante" class="product-image">
                     </div>
                     <div class="product-footer">
                         <div class="product-title">Pulseras Elegantes</div>
@@ -312,10 +129,10 @@
             <div class="col-md-3 col-sm-6 mb-4 product-item" data-category="ganchos">
                 <div class="product-card">
                     <div class="product-img">
-                        <img src="./assets/gancho mariposa.jpeg" alt="Espejo Redondo">
+                        <img src="./assets/gancho mariposa.jpeg" alt="Espejo Redondo" class="product-image">
                     </div>
                     <div class="product-footer">
-                        <div class="product-title">Espejos Decorativos</div>
+                        <div class="product-title">Gancho mariposa</div>
                         <a href="#" class="product-link">Ver todo</a>
                     </div>
                 </div>
@@ -325,7 +142,7 @@
             <div class="col-md-3 col-sm-6 mb-4 product-item" data-category="ganchos">
                 <div class="product-card">
                     <div class="product-img">
-                        <img src="./assets/Gancho-redondo.jpeg" alt="Gancho Vintage">
+                        <img src="./assets/Gancho-redondo.jpeg" alt="Gancho Vintage" class="product-image">
                     </div>
                     <div class="product-footer">
                         <div class="product-title">Ganchos Vintage</div>
@@ -338,59 +155,24 @@
         </div>
     </div>
 
+    <!-- Modal para imagen en pantalla completa -->
+    <div class="modal fade fullscreen-modal" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-body">
+                    <img src="/placeholder.svg" id="fullScreenImage" alt="Imagen en pantalla completa">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- JavaScript para los filtros -->
-     <script>
-         document.addEventListener('DOMContentLoaded', function() {
-            // Filtros de categoría
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const productItems = document.querySelectorAll('.product-item');
-            const sectionTitle = document.querySelector('.section-title');
-
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remover clase active de todos los botones
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    // Añadir clase active al botón clickeado
-                    this.classList.add('active');
-
-                    const filterValue = this.getAttribute('data-filter');
-
-                    // Actualizar título de la sección
-                    if (filterValue === 'all') {
-                        sectionTitle.textContent = 'Todos los productos';
-                    } else {
-                        sectionTitle.textContent = this.textContent;
-                    }
-
-                    // Mostrar/ocultar productos según el filtro
-                    productItems.forEach(item => {
-                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            });
-
-            // Filtro de búsqueda
-            const searchInput = document.querySelector('.search-container input');
-            searchInput.addEventListener('keyup', function() {
-                const searchValue = this.value.toLowerCase();
-
-                productItems.forEach(item => {
-                    const title = item.querySelector('.product-title').textContent.toLowerCase();
-                    if (title.includes(searchValue)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-     </script>
+     <script src="./js/Productos.js"></script>
 </body>
 </html>
