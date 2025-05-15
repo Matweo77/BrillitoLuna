@@ -130,7 +130,7 @@ function shareOnWhatsApp(productName, productPrice) {
     ¿Me puedes ayudar con más detalles? ☺`;
 
     // Construye la URL para abrir WhatsApp con el mensaje codificado
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message, message_2)}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
     // Abre una nueva ventana/pestaña con WhatsApp Web para enviar el mensaje
     window.open(whatsappUrl, '_blank');
