@@ -118,18 +118,20 @@
             }
 
 function shareOnWhatsApp(productName, productPrice) {
+  
 
     // Construcción del mensaje con formato WhatsApp y emojis
     let message = 
-`¡Hola! 👋
+`¡Hola! 👋🏽
 
 Estoy *muy interesado* en el producto: *${productName}* ✨
 
-¡Me encantaría saber más! 💥
+¡Me encantaría saber más! 💥 
 
-Precio: *$${productPrice}* 💰
+Precio: *$${productPrice}* 🫰💸
 
-¿Me puedes ayudar con más detalles? 😊`;
+
+¿Me puedes ayudar con más detalles? ☺`;
 
     // Construye la URL para abrir WhatsApp con el mensaje codificado
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
