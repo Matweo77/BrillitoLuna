@@ -37,23 +37,23 @@
 
             // Función para filtrar productos por categoría
             function filterProducts(filterValue) {
-                // Actualizar título de la sección
-                sectionTitle.textContent = filterValue === 'all' ? 'Todos los productos' : 
-                    filterButtons.forEach(btn => {
-                        if (btn.getAttribute('data-filter') === filterValue) {
-                            sectionTitle.textContent = btn.textContent;
-                        }
-                    });
+                if (filterValue === 'all') {
+                  sectionTitle.textContent = 'Todos los productos';
+                  } else {
+                   const btn = Array.from(filterButtons).find(btn => btn.getAttribute('data-filter') === filterValue);
+                if (btn) {
+                  sectionTitle.textContent = btn.textContent;
+                }
+             }
 
-                // Mostrar/ocultar productos según el filtro
-                productItems.forEach(item => {
-                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            }
+    productItems.forEach(item => {
+        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
 
             // Función para buscar productos
             function searchProducts(searchValue) {
