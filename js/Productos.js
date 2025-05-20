@@ -35,16 +35,15 @@
                 price: ''
             };
 
-            // Función para filtrar productos por categoría
-            function filterProducts(filterValue) {
-                if (filterValue === 'all') {
-                  sectionTitle.textContent = 'Todos los productos';
-                  } else {
-                   const btn = Array.from(filterButtons).find(btn => btn.getAttribute('data-filter') === filterValue);
-                if (btn) {
-                  sectionTitle.textContent = btn.textContent;
-                }
-             }
+function filterProducts(filterValue) {
+    if (filterValue === 'all') {
+        sectionTitle.textContent = 'Todos los productos';
+    } else {
+        const btn = Array.from(filterButtons).find(btn => btn.getAttribute('data-filter') === filterValue);
+        if (btn) {
+            sectionTitle.textContent = btn.textContent;
+        }
+    }
 
     productItems.forEach(item => {
         if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
@@ -54,6 +53,7 @@
         }
     });
 }
+
 
             // Función para buscar productos
             function searchProducts(searchValue) {
@@ -116,19 +116,20 @@
                 sharePage.classList.remove('active');
                 document.body.style.overflow = '';
             }
-
-function shareOnWhatsApp(productName, productPrice) {
-  
+function shareOnWhatsApp(productName, imageUrl, productPrice) {
+    const whatsappNumber = '3008650664';
 
     // Construcción del mensaje con formato WhatsApp y emojis
-    let message = `
-    ¡Hola, Brilitos De Luna! 👋🏽
+    let message = 
+`¡Hola! 👋
 
-    Estoy *muy interesado* en el producto: *${productName}* ✨
+Estoy *muy interesado* en el producto: *${productName}* ✨
 
-    ¡Me encantaría saber más! 💥 
+¡Me encantaría saber más! 💥
 
-    ¿Me puedes ayudar con más detalles? ☺`;
+Precio: *$${productPrice}* 💰
+
+¿Me puedes ayudar con más detalles? 😊`;
 
     // Construye la URL para abrir WhatsApp con el mensaje codificado
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -136,7 +137,6 @@ function shareOnWhatsApp(productName, productPrice) {
     // Abre una nueva ventana/pestaña con WhatsApp Web para enviar el mensaje
     window.open(whatsappUrl, '_blank');
 }
-
 
 
 
