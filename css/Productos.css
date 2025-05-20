@@ -54,7 +54,6 @@
 
     .header-right a:hover {
         color: var(--primary-color);
-        background-color: rgba(138, 43, 226, 0.08);
     }
 
     .header-right a i {
@@ -149,8 +148,8 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 50px;
-        height: 3px;
+        width: 16.5rem;
+        height: 2px;
         background-color: var(--primary-color);
         border-radius: 3px;
     }
@@ -212,10 +211,18 @@
     }
 
     .expand-btn {
-        bottom: 10px;
+     position: absolute;
+        top: 10px;
         right: 10px;
-        background-color: rgba(255, 255, 255, 0.9);
-        color: var(--primary-color);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        font-size: 12px;
+        padding: 4px 8px;
+        border-radius: 4px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: var(--transition-normal);
+        cursor: pointer;
     }
 
     .whatsapp-btn {
@@ -231,9 +238,8 @@
     }
 
     .expand-btn:hover {
-        background-color: var(--primary-color);
+        /* background-color: var(--primary-color); */
         color: white;
-        transform: scale(1.1);
     }
 
     .whatsapp-btn:hover {
@@ -243,26 +249,16 @@
 
     /* Indicador de zoom */
     .zoom-indicator {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: white;
-        font-size: 12px;
-        padding: 4px 8px;
-        border-radius: 4px;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: var(--transition-normal);
+      
     }
 
-    .product-img:hover .zoom-indicator {
+    .product-img:hover .expand-btn {
         opacity: 1;
         transform: translateY(0);
     }
 
     .product-footer {
-        background-color: #333;
+        background-color: #000000;
         color: white;
         padding: 12px 15px;
         display: flex;
@@ -284,7 +280,6 @@
 
     .product-link:hover {
         color: white;
-        text-decoration: underline;
     }
 
     /* Modal de imagen */
@@ -667,7 +662,7 @@
             flex-direction: column;
             gap: 10px;
         }
-          .product-card{
+        .product-card{
             height: 35vh !important;
         }
     }
