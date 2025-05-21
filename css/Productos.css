@@ -258,9 +258,9 @@
     }
 
     .product-footer {
-        background-color: #000000;
+        background-color:rgb(2, 2, 2);
         color: white;
-        padding: 12px 15px;
+        padding: 6px 15px;
         display: flex;
         justify-content: space-between;
         align-items: end;
@@ -666,6 +666,6 @@
             gap: 10px;
         }
         .product-card{
-            height: 35vh !important;
+            height: 34.4vh !important;
         }
     }
