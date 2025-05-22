@@ -125,4 +125,24 @@ h2 {
     .description {
         margin-bottom: 40px !important;
     }
+    #titulo {
+        font-size: 40px !important;
+        margin-top: 3.5rem !important; 
+        margin-bottom: -0.7rem !important;
+    }
+    #bd-placeholder-img{
+        height:200px !important;
+        width: 300px !important;
+       
+        align-items: center !important;
+    }
+    #division-articulos{
+        margin-bottom: 3rem !important;
+    }
+    .placeholder-image{
+        border: 1px solid rgba(0, 0, 0, 0.1) !important;
+        justify-content: center !important;
+        display: flex !important;
+        align-items: center !important;
+    }
 }
