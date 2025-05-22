@@ -25,7 +25,7 @@
             const captureProductPrice = document.getElementById('captureProductPrice');
 
             // Número de WhatsApp
-            const whatsappNumber = "573008650664";
+            const whatsappNumber = "+57 3008650664";
 
             // Variable para almacenar la información del producto actual
             let currentProduct = {
