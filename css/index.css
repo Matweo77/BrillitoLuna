@@ -1,125 +1,128 @@
-  * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', 'Josefin Sans', Arial, sans-serif;
-        }
-        
-        body {
-            /* background-color: #ebc9eb; Color lila similar al de la imagen */
-            color: rgb(0, 0, 0);
-            min-height: 100vh;
-        }
-        
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px;
-            background-color: rgb(255, 255, 255);
-            color: rgb(0, 0, 0);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        }
-        
-        .edit-button {
-            font-weight: bold;
-        }
-        
-        .page-title {
-            text-align: center;
-        }
-        
-        .page-title h1 {
-            font-size: 16px;
-            font-weight: normal;
-        }
-        
-        .page-title p {
-            font-size: 12px;
-            color: rgba(0, 0, 0, 0.7);
-            font-weight: bold;
-        }
-        
-        .icons {
-            display: flex;
-            gap: 15px;
-        }
-        
-        main {
-            display: flex;
-            padding: 50px 20px;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .content {
-            max-width: 700px;
-        }
-        
-        h2 {
-            font-size: 80px;
-            line-height: 1.1;
-            margin-bottom: 30px;
-        }
-        
-        .start-button {
-            background-color: rgb(3, 3, 3);
-            color: #ffffff;
-            border: none;
-            padding: 15px 30px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            text-decoration: none;
-        }
-        
-        .description {
-            font-size: 14px;
-            color: rgba(0, 0, 0, 0.9);
-            line-height: 1.5;
-            margin-top: 35px;
-        }
-        
-        .image-placeholder {
-            width: 400px;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.5);
-        }
-        
-        @media (max-width: 768px) {
-            main {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            h2 {
-                font-size: 40px;
-                margin-bottom: 60px;
-            }
-            
-            .image-placeholder {
-                margin-top: 50px;
-                width: 100%;
-                max-width: 300px;
-                height: 300px;
-            }
-            header {
-                position: sticky;
-                top: 0;
-                z-index: 1000;       
-            }
-             /* .content {
-              max-width: 100%;
-              border-radius: 8px;
-              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-             } */
-             .description {
-               margin-bottom: 40px;
-             }
-        }
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    font-family: 'Montserrat', 'Josefin Sans', Arial, sans-serif !important;
+}
+
+body {
+    /* background-color: #ebc9eb; Color lila similar al de la imagen */
+    color: rgb(0, 0, 0) !important;
+    min-height: 100vh !important;
+}
+
+header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 8px !important;
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(0, 0, 0) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.edit-button {
+    font-weight: bold !important;
+}
+
+.page-title {
+    text-align: center !important;
+}
+
+.page-title h1 {
+    font-size: 16px !important;
+    font-weight: normal !important;
+}
+
+.page-title p {
+    font-size: 12px !important;
+    color: rgba(0, 0, 0, 0.7) !important;
+    font-weight: bold !important;
+}
+
+.icons {
+    display: flex !important;
+    gap: 15px !important;
+}
+
+main {
+    display: flex !important;
+    padding: 50px 20px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+.content {
+    max-width: 700px !important;
+}
+
+h2 {
+    font-size: 80px !important;
+    line-height: 1.1 !important;
+    margin-bottom: 30px !important;
+}
+
+.start-button {
+    background-color: rgb(3, 3, 3) !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 15px 30px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    text-decoration: none !important;
+}
+
+.description {
+    font-size: 14px !important;
+    color: rgba(0, 0, 0, 0.9) !important;
+    line-height: 1.5 !important;
+    margin-top: 35px !important;
+}
+
+.image-placeholder {
+    width: 400px !important;
+    height: 500px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    
+    h2 {
+        font-size: 40px !important;
+        margin-bottom: 60px !important;
+    }
+    
+    .image-placeholder {
+        margin-top: 50px !important;
+        width: 100% !important;
+        max-width: 300px !important;
+        height: 300px !important;
+    }
+    
+    header {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 1000 !important;       
+    }
+    
+    /* .content {
+        max-width: 100% !important;
+        border-radius: 8px !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    } */
+    
+    .description {
+        margin-bottom: 40px !important;
+    }
+}
