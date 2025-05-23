@@ -76,7 +76,7 @@ h2 {
     text-decoration: none !important;
 }
 
-.description {
+.description { 
     font-size: 14px !important;
     color: rgba(0, 0, 0, 0.9) !important;
     line-height: 1.5 !important;
@@ -91,6 +91,31 @@ h2 {
     justify-content: center !important;
     color: rgba(255, 255, 255, 0.5) !important;
 }
+
+/* Boton de compartir */
+    .whatsapp-btn {
+        bottom: 10px;
+        left: 10px;
+        background-color: #128C7E;
+        color: #fff;
+    }   
+    .whatsapp-btn:hover {
+        background-color: #128C7E;
+        transform: scale(1.1);
+    }
+    .action-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transform: translateY(2px);
+        transition: 0.5s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+     
+    
 
 @media (max-width: 768px) {
     main {
@@ -128,19 +153,25 @@ h2 {
     #titulo {
         font-size: 40px !important;
         margin-top: 3.5rem !important; 
-        margin-bottom: -0.7rem !important;
+        margin-bottom: 1rem !important;
     }
     #bd-placeholder-img{
-        height:200px !important;
-        width: 300px !important;
-       
+        height:300px !important;
+        width: 450px !important;
         align-items: center !important;
+       /* transform: rotateY(50deg);
+         border: 1px solid rgba(0, 0, 0, 0.1) !important; */
+    }
+    .version1{
+        height:350px !important;
+        width: 5000px !important;
+        align-items: center !important;
+        transform: rotateY(50deg) !important;
     }
     #division-articulos{
-        margin-bottom: 3rem !important;
+        margin-bottom: 10rem !important;
     }
     .placeholder-image{
-        border: 1px solid rgba(0, 0, 0, 0.1) !important;
         justify-content: center !important;
         display: flex !important;
         align-items: center !important;
