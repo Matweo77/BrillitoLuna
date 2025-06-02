@@ -195,46 +195,47 @@
     /* Botones de acción */
     .action-btn {
         position: absolute;
-        width: 36px;
-        height: 36px;
+        width: 27px;
+        height: 27px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        opacity: 0;
+        /* opacity: 0; */
         transform: translateY(10px);
         transition: var(--transition-normal);
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         z-index: 2;
         border: none;
+        margin-bottom: 6px;
     }
 
     .expand-btn {
-     position: absolute;
+        position: absolute;
         top: 10px;
         right: 10px;
         background-color: rgba(0, 0, 0, 0.7);
         color: white;
         font-size: 12px;
-        padding: 4px 8px;
+        padding: 2px 4px;
         border-radius: 4px;
-        opacity: 0;
-        transform: translateY(-10px);
+        opacity: 0; 
+        transform: translateY(-4px);
         transition: var(--transition-normal);
         cursor: pointer;
     }
 
     .whatsapp-btn {
         bottom: 10px;
-        left: 10px;
+        left: 6px;
         background-color: var(--whatsapp-color);
         color: white;
     }
 
     .product-img:hover .action-btn {
         opacity: 1;
-        transform: translateY(0);
+        /* transform: translateY(0); */
     }
 
     .expand-btn:hover {
@@ -426,7 +427,8 @@
 
     .share-container {
         background-color: white;
-        border-radius: var(--border-radius-lg);
+        /* border-radius: var(--border-radius-lg); */
+        border-radius: 5px;
         width: 90%;
         max-width: 500px;
         overflow: hidden;
@@ -547,13 +549,13 @@
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .share-whatsapp-btn {
+    .share-whatsapp-btn:hover {
         background-color: var(--whatsapp-color);
         color: white;
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
     }
 
-    .share-whatsapp-btn:hover {
+    .share-whatsapp-btn {
         background-color: #128C7E;
         transform: translateY(-2px);
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -672,4 +674,5 @@
          .product-item{
             margin-bottom: 3rem  !important;
         }
+     
     }

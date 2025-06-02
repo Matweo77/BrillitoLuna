@@ -8,7 +8,7 @@
             const expandButtons = document.querySelectorAll('.expand-btn');
             const whatsappButtons = document.querySelectorAll('.whatsapp-btn');
             const fullScreenImage = document.getElementById('fullScreenImage');
-            const imageInfo = document.getElementById('imageInfo');
+            // const imageInfo = document.getElementById('imageInfo');
             const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
             const modalWhatsappBtn = document.getElementById('modalWhatsappBtn');
             const sharePage = document.getElementById('sharePage');
@@ -25,7 +25,7 @@
             const captureProductPrice = document.getElementById('captureProductPrice');
 
             // Número de WhatsApp
-            const whatsappNumber = "3008650664";
+            const whatsappNumber = "573008650664";
 
             // Variable para almacenar la información del producto actual
             let currentProduct = {
@@ -78,7 +78,7 @@ function filterProducts(filterValue) {
                 currentProduct.imageAlt = imgElement.alt;
                 
                 // Mostrar el título del producto en el modal
-                imageInfo.textContent = productName;
+                // imageInfo.textContent = productName;
                 
                 imageModal.show();
             }
@@ -117,13 +117,12 @@ function filterProducts(filterValue) {
                 document.body.style.overflow = '';
             }
 function shareOnWhatsApp(productName, imageUrl, productPrice) {
-    const whatsappNumber = '3008650664';
+    const whatsappNumber = '573008650664';
 
     // Construcción del mensaje con formato WhatsApp y emojis
     let message = 
-`¡Hola! 👋
-
-Estoy *muy interesado* en el producto: *${productName}* ✨
+`¡Hola! Brillitos Luna. 👋
+Estoy *interesado* en el producto: *${productName}* ✨
 
 ¡Me encantaría saber más! 💥
 
