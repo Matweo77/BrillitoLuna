@@ -697,5 +697,6 @@
         transform: translateY(-4px);
         transition: var(--transition-normal);
         font-weight: bold;
+        margin-left: 7px;
     } 
 }
