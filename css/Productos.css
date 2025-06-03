@@ -226,6 +226,18 @@
         cursor: pointer;
     }
 
+    .agotado {
+        position: absolute;
+        top: 10px;
+        right: 140px;
+        color: rgba(255, 0, 0, 0.7);
+        font-size: 11px;
+        /* opacity: 0;  */
+        transform: translateY(-4px);
+        transition: var(--transition-normal);
+        font-weight: bold;
+    }
+
     .whatsapp-btn {
         bottom: 10px;
         left: 6px;
@@ -674,5 +686,16 @@
          .product-item{
             margin-bottom: 3rem  !important;
         }
-     
-    }
+
+        .agotado {
+        position: absolute;
+        top: 10px;
+        right: 320px;
+        color: rgba(255, 0, 0, 0.7);
+        font-size: 11px;
+        /* opacity: 0;  */
+        transform: translateY(-4px);
+        transition: var(--transition-normal);
+        font-weight: bold;
+    } 
+}
